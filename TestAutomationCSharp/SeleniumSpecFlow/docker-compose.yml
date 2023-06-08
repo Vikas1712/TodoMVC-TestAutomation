@@ -1,0 +1,6 @@
+﻿services:
+  seleniumcsharp:
+    image: seleniumspecFlow
+    build:
+      context: .
+      dockerfile: SeleniumSpecFlow/Dockerfile

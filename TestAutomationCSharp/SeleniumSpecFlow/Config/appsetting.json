@@ -1,0 +1,9 @@
+﻿{
+  "BrowserType": "Chrome",
+  "ApplicationUrl": "https://trello.com",
+  "TimeoutInterval": 100,
+  "Username": "letsmailvikas@gmail.com",
+  "Password":"Password",
+  "SeleniumGridUrl": "https://local-hub:4444/wd/hub",
+  "ExecutionType": "Local"
+}

@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Using Include="TechTalk.SpecFlow" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="ExtentReports" Version="5.0.0-alpha6" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.0" />
+        <PackageReference Include="Selenium.Support" Version="4.9.1" />
+        <PackageReference Include="Selenium.WebDriver" Version="4.9.1" />
+        <PackageReference Include="SpecFlow" Version="3.9.74" />
+        <PackageReference Include="SpecFlow.Plus.LivingDocPlugin" Version="3.9.57" />
+        <PackageReference Include="SpecFlow.NUnit" Version="3.9.74" />
+        <PackageReference Include="nunit" Version="3.13.3" />
+        <PackageReference Include="NUnit3TestAdapter" Version="4.4.2" />
+        <PackageReference Include="FluentAssertions" Version="6.11.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Result\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <UpToDateCheckInput Remove="Features\Trello\Board.feature" />
+      <UpToDateCheckInput Remove="Features\Trello\Cards.feature" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <UpToDateCheckBuild Remove="Features\Trello\Board.feature.cs" />
+      <UpToDateCheckBuild Remove="Features\Trello\Cards.feature.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Config\GlobalConfig.xml" />
+      <Content Include="Config\GlobalConfig.xml">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Config\appsetting.json" />
+      <Content Include="Config\appsetting.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
+</Project>

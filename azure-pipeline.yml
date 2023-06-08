@@ -1,0 +1,38 @@
+name: SELENIUMCSHARP
+trigger:
+ batch: true
+ branches:
+  include:
+    - main
+pr: none
+pool:
+  vmImage: 'windows-2022'
+variables:
+  solution: '**/*.sln'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+  GitVersion.SemVer: ''
+stages:
+  - stage: BuildAndTest
+    displayName: Build and test
+    jobs: 
+      - job: BuildJob
+        displayName: Build and Test
+        timeoutInMinutes: 180
+        steps:
+          - task: DotNetCoreCLI@2
+            displayName: Restore NuGet packages
+            inputs:
+              command: restore
+              projects: '**/*.csproj'
+          - task: VSBuild@1
+            displayName: Build solution
+            inputs:
+              solution: '$(solution)'
+              platform: '$(buildPlatform)'
+              configuration: '$(buildConfiguration)'
+          - task: VSTest@2
+            inputs:
+              solution: '$(solution)'
+              platform: '$(buildPlatform)'
+              configuration: '$(buildConfiguration)'
