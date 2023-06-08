@@ -16,7 +16,7 @@ The framework utilizes various tools and components to facilitate efficient and 
 
 ## ✨ Instructions for Windows
 
-- Clone the repo **git clone https://github.com/knabnl-incubator/vikasyadav-knab**
+- Clone the repo **git clone https://github.com/Vikas1712/TodoMVC-TestAutomation**
 - Once done, open the solution in Visual Studio IDE or JetBrain Rider  **SeleniumCSharp.sln**
 - Install Nuget packgae **Right-click on project and click "Manage NuGet Package" and install it**
 
@@ -46,6 +46,42 @@ The framework is structured into the following directories:
 - **Result**- Stores the test result.
 - **ReadMe**- Contains the framework development and instruction document.
 
+---
+
+## ✨ Execution Instructions
+
+To execute the tests, perform the following steps:
+
+1. Set up the required test environment dependencies. For front-end testing, make sure you have a compatible web browser and WebDriver set up.
+2. Configure any necessary test environment settings or configurations.
+3. Run the tests from your IDE or execute the test projects via the command line.
+4. Monitor the test execution progress and review the test results.
+---
+
+## ✨ Docker
+
+This project includes Docker support. You can run the project with Docker by following these steps:
+
+1. Install Docker on your machine.
+2. Pull the necessary Docker images by running the appropriate Docker pull commands.
+3. Set up the required test environment dependencies within the Docker container.
+4. Build and run the project within the Docker container, ensuring the necessary configurations are in place.
+
+---
+
+### TestResult SeleniumSpecFlow - Front-End
+
+---
+
+### Positive Scenarios 
+
+![img_2.png](img_2.png)
+
+## Negative Scenarios
+
+---
+
+![img_1.png](img_1.png)
 ---
 
 ## ✨ Codebase is developed on below  components

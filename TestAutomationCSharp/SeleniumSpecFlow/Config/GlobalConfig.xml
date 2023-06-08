@@ -4,6 +4,6 @@
         <URL>https://todomvc.com/examples/angular2/</URL>
         <Browser>Chrome</Browser>
         <DefaultWait>100</DefaultWait>
-        <ExecutionType>Remote</ExecutionType>
+        <ExecutionType>Local</ExecutionType>
     </RunSettings>
 </SeleniumCSharpFramework>
